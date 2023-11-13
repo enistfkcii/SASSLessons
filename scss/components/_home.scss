@@ -1,0 +1,27 @@
+.home{
+    @extend %align-center;
+    height: 80vh;
+
+    &-container{
+    // home altındaki containera erişmemize yarıyor &- kısmı.
+    @extend %align-center;
+    flex-direction: column;
+
+    &-textOne
+    {
+    font-size: $largeFont;
+    margin-bottom: 20px;
+    }
+    &-textTwo
+    {
+    font-size: $mediumFont;
+    text-align: center;
+    max-width: 500px;
+    color: $colorone;
+    }
+    }
+    @include tablet{
+        // include i mixinsleri cagırabilmek için kullanıyoruz.
+        color: $colorWhite;
+    }
+}
